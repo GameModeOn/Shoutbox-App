@@ -25,7 +25,7 @@ function refresh() {
     if (!lock) {
         lock = true;
         $.get('https://gamemodeon.de/sb/output.php?lid='+lid+'&time='+new Date, function(data){
-            if(data != 'false') {
+            if(data != '') {
                 var lmsg = data.split("\n")
                 lid = lmsg[0];
                 $('#output').prepend(lmsg[1]);
@@ -40,7 +40,7 @@ function login() {
     var user = $('[name="user"]').val()
     var passwd = $('[name="passwd"]').val()
     $.post("https://gamemodeon.de/sb/input-login.php", { user: user, passwd: passwd }).done(function(data) {
-        if(data != 'false') {
+        if(data != '') {
             sid = data;
             $('#login').hide();
             $('#input').show();
@@ -65,7 +65,7 @@ function input() {
     <input type="text" value="Username" name="user"><br>
     <input type="password" value="Passwort" name="passwd"><br>
     <input type="submit" onclick="login();" value="Login">
-    <div id="errorlogin" style="display:none;color:red;">Fehlerhafte Logindaten!</div>
+    <div id="errorlogin" style="display:none;color:red;">Fehlerhafter Login. Bitte versuchen Sie es erneut!</div>
 </div>
 
 <div id="input" style="display:none;">
