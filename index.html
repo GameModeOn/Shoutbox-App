@@ -12,7 +12,7 @@ lock = false;
 function refresh(){
     if (!lock) {
         lock = true;
-        $.get('https://gamemodeon.de/output.php?lid='+lid+'&time='+new Date, function(data){
+        $.get('https://gamemodeon.de/sb/output.php?lid='+lid+'&time='+new Date, function(data){
             if (data != '') {
                 var lmsg = data.split("\n")
                 lid = lmsg[0];
