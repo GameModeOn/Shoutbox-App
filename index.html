@@ -12,7 +12,7 @@ lock = false;
 function refresh(){
     if (!lock) {
         lock = true;
-        $.get('http://sb.gamemodeon.de/outputa.php?lid='+lid+'&time='+new Date, function(data){
+        $.get('https://gamemodeon.de/output.php?lid='+lid+'&time='+new Date, function(data){
             if (data != '') {
                 var lmsg = data.split("\n")
                 lid = lmsg[0];
@@ -24,4 +24,4 @@ function refresh(){
 }
 setInterval("refresh()",1000);
 
-</script></head><body></body></html>
+</script></head><body><script type="text/javascript">refresh();</script></body></html>
