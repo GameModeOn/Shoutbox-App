@@ -1,22 +1,37 @@
 <!DOCTYPE html><html><head><style type="text/css">
 
+
 body {
     background-color: black;
     color: #AAAAAA;
 }
+input {
+    background-color: gray;
+    width: 40%;
+}
+#input {
+    display: hidden;
+}
+#message {
+    width: 81%;
+}
+.submit {
+    width:18%;
+}
 
 </style><script type="text/javascript" src="jquery.js"></script><script type="text/javascript">
 
+
 lid = 123;
 lock = false;
-function refresh(){
+function refresh() {
     if (!lock) {
         lock = true;
         $.get('https://gamemodeon.de/sb/output.php?lid='+lid+'&time='+new Date, function(data){
             if (data != '') {
                 var lmsg = data.split("\n")
                 lid = lmsg[0];
-                $('body').prepend(lmsg[1]);
+                $('#output').prepend(lmsg[1]);
             }
         });
         lock = false;
@@ -24,4 +39,24 @@ function refresh(){
 }
 setInterval("refresh()",1000);
 
-</script></head><body></body></html>
+document.addEventListener("menubutton", onMenuKeyDown, false);
+function onMenuKeyDown() {
+    device.exitApp();
+}
+
+</script></head><body>
+
+
+<div id="login">
+    <input type="text" value="Username" size=8 name="user">
+    <input type="password" value="Passwort" size=8 name="passwd">
+    <input type="submit" class="submit" value="Login">
+</div>
+
+<div id="input">
+    <input type="text" id="message" size=16 name="message">
+    <input type="submit" class="submit" value="SHOUT">
+</div>
+
+
+<div id="output"></div></body></html>
