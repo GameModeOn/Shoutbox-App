@@ -9,16 +9,6 @@ input {
     background-color: gray;
     width: 40%;
 }
-#input {
-    display: none;
-}
-#message {
-    width: 81%;
-}
-.submit {
-    width:18%;
-}
-
 
 </style><script type="text/javascript" src="jquery.js"></script><script type="text/javascript">
 
@@ -50,14 +40,14 @@ function onMenuKeyDown() {
 
 
 <div id="login">
-    <input type="text" value="Username" size=8 name="user">
-    <input type="password" value="Passwort" size=8 name="passwd">
-    <input type="submit" class="submit" value="Login">
+    <input type="text" style="width:40%" value="Username" size=8 name="user">
+    <input type="password" style="width:40%" value="Passwort" size=8 name="passwd">
+    <input type="submit" style="width:18%"value="Login">
 </div>
 
-<div id="input">
-    <input type="text" id="message" size=16 name="message">
-    <input type="submit" class="submit" value="SHOUT">
+<div id="input" style="display:none;">
+    <input type="text" style="width:80%" id="message" size=16 name="message">
+    <input type="submit" style="width:19%" value="SHOUT">
 </div>
 
 
