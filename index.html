@@ -1,4 +1,3 @@
-
 <!DOCTYPE html><html><head><style type="text/css">
 
 body {
@@ -6,14 +5,14 @@ body {
     color: #AAAAAA;
 }
 
-</style><script type="text/javascript" src="/jquery.js"></script><script type="text/javascript">
+</style><script type="text/javascript" src="jquery.js"></script><script type="text/javascript">
 
 lid = 11730;
 lock = false;
 function refresh(){
     if (!lock) {
         lock = true;
-        $.get('outputa.php?lid='+lid+'&time='+new Date, function(data){
+        $.get('http://sb.gamemodeon.de/outputa.php?lid='+lid+'&time='+new Date, function(data){
             if (data != '') {
                 var lmsg = data.split("\n")
                 lid = lmsg[0];
@@ -28,4 +27,9 @@ setInterval("refresh()",1000);
 </script></head><body>
 
 [12:40] <strong style="color:dodgerblue;">lub</strong>&nbsp;&nbsp;moin<br>[12:30] <strong style="color:yellowgreen;">Banana</strong>&nbsp;&nbsp;moin<br>[09:31] <strong style="color:#EEEEEE;">g0dhand</strong>&nbsp;&nbsp;moinmoin<br>[08:05] <strong style="color:yellowgreen;">Drax</strong>&nbsp;&nbsp;Morg&auml;&auml;&auml;&auml;hn...<br>[00:50] <strong style="color:dodgerblue;">lub</strong>&nbsp;&nbsp;http://sb.gamemodeon.de/indexa.php<br>[00:50] <strong style="color:dodgerblue;">lub</strong>&nbsp;&nbsp;fr&ouml;hliches testen und gute nacht<br>[00:50] <strong style="color:dodgerblue;">lub</strong>&nbsp;&nbsp;adfgdfg<br>[00:50] <strong style="color:dodgerblue;">lub</strong>&nbsp;&nbsp;j<br>[00:16] <strong style="color:#EEEEEE;">Swarley</strong>&nbsp;&nbsp;die games mit meinen anderen klassen wird jetzt noch h&auml;rter :(<br>[00:14] <strong style="color:#EEEEEE;">g0dhand</strong>&nbsp;&nbsp;ich bin heute aufgestiegen obwohl ich nur ne klasse lvln wollte xDD<br>[00:05] <strong style="color:#EEEEEE;">Swarley</strong>&nbsp;&nbsp;verdammt ich habe mein krieger deck zu oft hinter einander gespielt und wurde in hearthstone hochgeranked -.-<br>[00:03] <strong style="color:dodgerblue;">lub</strong>&nbsp;&nbsp;*schwei&szlig; von der stirn wisch* zwei minuten vor schluss den thread of the day erstellt :P<br>[23:45] <strong style="color:dodgerblue;">lub</strong>&nbsp;&nbsp;gz<br>[23:40] <strong style="color:yellowgreen;">Drax</strong>&nbsp;&nbsp;muahaha die unm&ouml;glichsten aufstiege haben heut gefunzt xD<br>[23:39] <strong style="color:#EEEEEE;">g0dhand</strong>&nbsp;&nbsp;ENDLICH GOLD NOVA :D CPT CAPS AM WERK<br>[23:00] <strong style="color:yellowgreen;">Drax</strong>&nbsp;&nbsp;wtf Limp Bizkit - Rollin' ewig net mehr geh&ouml;rt :D manchma is der liederbewertungsthread doch brauchbar xD<br>[22:49] <strong style="color:yellowgreen;">Drax</strong>&nbsp;&nbsp;elend lange gewartet<br>[22:49] <strong style="color:yellowgreen;">Drax</strong>&nbsp;&nbsp;verdammte axt ich bin silber elite master :D<br>[22:37] <strong style="color:#EEEEEE;">skYnet</strong>&nbsp;&nbsp;handymandy schnellschreiben :D<br>[22:36] <strong style="color:#EEEEEE;">Tholor</strong>&nbsp;&nbsp;deine tastatur scheint etwas kaputt zu sein<br>
-</body></html>
+
+</body><script type="text/javascript">
+
+$('body').load('http://sb.gamemodeon.de/outputa.php');
+
+</script></html>
