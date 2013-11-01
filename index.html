@@ -16,12 +16,13 @@ input[type="submit"] {
     left: 2px;
 }
 
+
 </style><script type="text/javascript" src="jquery.js"></script><script type="text/javascript">
 
 
 lid = 0;
 lock = false;
-function refresh() {
+function output() {
     if (!lock) {
         lock = true;
         $.get('https://gamemodeon.de/sb/output.php?lid='+lid+'&time='+new Date, function(data){
@@ -34,20 +35,30 @@ function refresh() {
         lock = false;
     }
 }
-setInterval("refresh()",1000);
+setInterval("output()",1000);
 
 function login() {
     var user = $('[name="user"]').val()
     var passwd = $('[name="passwd"]').val()
+    var savelogin = $('[name="savelogin"]').val()
     $.post("https://gamemodeon.de/sb/input-login.php", { user: user, passwd: passwd }).done(function(data) {
         if(data != '') {
             sid = data;
             $('#login').hide();
             $('#input').show();
+            if(savelogin = true) {
+                savelogin(user, passwd);
+            } else {
+                alert('nicht gespeichert');
+            }
         } else {
             $('#errorlogin').show();
         }
     });
+}
+
+function savelogin(user, passwd) {
+    alert('gespeichert);
 }
 
 function input() {
@@ -64,6 +75,7 @@ function input() {
 <div id="login">
     <input type="text" value="Username" name="user"><br>
     <input type="password" value="Passwort" name="passwd"><br>
+    <input type="checkbox" value="true" name="savelogin"> Login speichern<br>
     <input type="submit" onclick="login();" value="Login">
     <div id="errorlogin" style="display:none;color:red;">Fehlerhafter Login. Bitte versuchen Sie es erneut!</div>
 </div>
