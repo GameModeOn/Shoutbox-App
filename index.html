@@ -23,9 +23,12 @@ input {
 
 function init() {
     var autologin = window.localStorage.getItem('autologin');
-    if(autologin == 'true'){
+    $('#debug').append(autologin);
+    if(autologin == 'true') {
         var user = window.localStorage.getItem('user');
         var passwd = window.localStorage.getItem('passwd');
+        $('#debug').append(user);
+        $('#debug').append(passwd);
         login(user, passwd);
     }
     output();
@@ -78,7 +81,7 @@ function input() {
 
 </script></head><body>
 
-
+<div id="debug"></div>
 <div id="login">
     <input type="text" value="Username" name="user"><br>
     <input type="password" value="Passwort" name="passwd"><br>
