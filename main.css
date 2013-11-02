@@ -21,7 +21,11 @@ div {
     display: none;
 }
 
-#menubutton {
+#menu div {
+    display: block;
+}
+
+.menubutton {
     position: absolute;
     bottom: 10px;
     right: 10px;

@@ -13,6 +13,7 @@ function init() {
     }
     output();
     $('#output').show();
+    $('#main').show();
 }
 
 lid = 0;
@@ -50,6 +51,12 @@ function login(user, passwd) {
         }
     });
 }
+function logout() {
+    window.localStorage.removeItem('user');
+    window.localStorage.removeItem('passwd');
+    window.localStorage.removeItem('autologin');
+    closemenu();
+}
 
 function input() {
     var message = $('[name="message"]').val();
@@ -58,22 +65,23 @@ function input() {
     });
 }
 
-function menu() {
-    alert('gnihihihi');
+function openmenu() {
+    $('#main').hide();
+    $('#menu').show();
 }
 
-/*$('#message').focus(function() {
-    $('#message').height('50');
-})*/
+function closemenu() {
+    $('#menu').hide();
+    $('#main').show();
+}
 
-
-</script></head><body>
+</script></head><body><div id="main">
 
 
 <div id="login">
     <input type="text" value="Username" name="user"><br>
     <input type="password" value="Passwort" name="passwd"><br>
-    <input type="checkbox" value="" name="savelogin"> Login speichern<br>
+    &nbsp;&nbsp;<input type="checkbox" value="" name="savelogin"> Login speichern<br>
     <input type="submit" onclick="login();" value="Login">
     <div id="errorlogin" style="display:none;color:red;">Fehlerhafter Login. Bitte versuchen Sie es erneut!</div>
 </div>
@@ -85,9 +93,18 @@ function menu() {
 
 <div id="output"></div>
 
-<div id="menubutton" onclick="menu();">
+<div id="menubutton" class="menubutton" onclick="openmenu();">
     <hr><hr><hr>
 </div>
 
 
-<script type="text/javascript">init();</script></body></html>
+</div><div id="menu" style="display:none;">
+
+<input type="submit" onclick="logout();" value="Ausloggen">
+
+<div class="menubutton" onclick="closemenu();">
+    <hr><hr><hr>
+</div>
+
+
+</div><script type="text/javascript">init();</script></body></html>
