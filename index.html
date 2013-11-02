@@ -13,28 +13,26 @@ input {
     margin-bottom: 2px;
     width: 100%;
 }
-/*input[type="submit"] {
-    position: relative;
-    left: 2px;
-}*/
 
 
 </style><script type="text/javascript" src="jquery.js"></script><script type="text/javascript">
 
+
 function init() {
     var autologin = window.localStorage.getItem('autologin');
+    $('#debug').append('DEBUGautologin');
     $('#debug').append(autologin);
     if(autologin == 'true') {
         var user = window.localStorage.getItem('user');
         var passwd = window.localStorage.getItem('passwd');
+        $('#debug').append('DEBUGuser');
         $('#debug').append(user);
+        $('#debug').append('DEBUGpasswd');
         $('#debug').append(passwd);
         login(user, passwd);
     }
     output();
 }
-
-
 
 lid = 0;
 function output() {
@@ -80,6 +78,7 @@ function input() {
 
 
 </script></head><body>
+
 
 <div id="debug"></div>
 <div id="login">
