@@ -24,8 +24,9 @@ function init() {
         var user = window.localStorage.getItem('user');
         var passwd = window.localStorage.getItem('passwd');
         login(user, passwd);
+    } else {
+        $('#login').show();
     }
-    $('#debug').append('autologin '+autologin+' '+user+' '+passwd);
     output();
 }
 
@@ -41,8 +42,7 @@ function output() {
     setTimeout("output()", 1000);
 }
 
-function savelogin() {
-    $('#debug').append('savelogin '+user+' '+passwd);
+function savelogin(user, passwd) {
     window.localStorage.setItem('user', user);
     window.localStorage.setItem('passwd', passwd);
     window.localStorage.setItem('autologin', 'true');
@@ -57,7 +57,7 @@ function login(user, passwd) {
             $('#login').hide();
             $('#input').show();
             if($('[name="savelogin"]').prop('checked')) {
-                savelogin();
+                savelogin(user, passwd);
             }
         } else {
             $('#errorlogin').show();
@@ -76,8 +76,7 @@ function input() {
 </script></head><body>
 
 
-<div id="debug"></div>
-<div id="login">
+<div id="login" style="display:none;">
     <input type="text" value="Username" name="user"><br>
     <input type="password" value="Passwort" name="passwd"><br>
     <input type="checkbox" value="" name="savelogin"> Login speichern<br>
