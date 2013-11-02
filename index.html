@@ -20,17 +20,12 @@ input {
 
 function init() {
     var autologin = window.localStorage.getItem('autologin');
-    $('#debug').append('DEBUGautologin');
-    $('#debug').append(autologin);
     if(autologin == 'true') {
         var user = window.localStorage.getItem('user');
         var passwd = window.localStorage.getItem('passwd');
-        $('#debug').append('DEBUGuser');
-        $('#debug').append(user);
-        $('#debug').append('DEBUGpasswd');
-        $('#debug').append(passwd);
         login(user, passwd);
     }
+    $('#debug').append('autologin '+autologin+' '+user+' '+passwd);
     output();
 }
 
@@ -47,7 +42,7 @@ function output() {
 }
 
 function savelogin() {
-    $('#debug').append('DEBUGsavelogin');
+    $('#debug').append('savelogin '+user+' '+passwd);
     window.localStorage.setItem('user', user);
     window.localStorage.setItem('passwd', passwd);
     window.localStorage.setItem('autologin', 'true');
