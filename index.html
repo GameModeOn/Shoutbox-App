@@ -1,22 +1,6 @@
-<!DOCTYPE html><html><head><style type="text/css">
+<!DOCTYPE html><html><head><link rel="stylesheet" type="text/css" href="main.css"><script type="text/javascript" src="jquery.js"></script><script type="text/javascript">
 
-
-body {
-    background-color: black;
-    color: #AAAAAA;
-}
-input {
-    background-color: gray;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    margin-bottom: 2px;
-    width: 100%;
-}
-
-
-</style><script type="text/javascript" src="jquery.js"></script><script type="text/javascript">
-
+url = 'https://gamemodeon.de/sb/1';
 
 function init() {
     var autologin = window.localStorage.getItem('autologin');
@@ -28,11 +12,12 @@ function init() {
         $('#login').show();
     }
     output();
+    $('#output').show();
 }
 
 lid = 0;
 function output() {
-    $.get('https://gamemodeon.de/sb/output.php?lid='+lid+'&time='+new Date, function(data){
+    $.get(url+'/output.php?lid='+lid+'&time='+new Date, function(data){
         if(data != '') {
             var lmsg = data.split("\n")
             lid = lmsg[0];
@@ -51,11 +36,12 @@ function savelogin(user, passwd) {
 function login(user, passwd) {
     user = user || $('[name="user"]').val();
     passwd = passwd || $('[name="passwd"]').val();
-    $.post("https://gamemodeon.de/sb/input-login.php", { user: user, passwd: passwd }).done(function(data) {
+    $.post(url+'/input-login.php', { user: user, passwd: passwd }).done(function(data) {
         if(data != '') {
             sid = data;
             $('#login').hide();
             $('#input').show();
+            $('#menubutton').show();
             if($('[name="savelogin"]').prop('checked')) {
                 savelogin(user, passwd);
             }
@@ -67,16 +53,24 @@ function login(user, passwd) {
 
 function input() {
     var message = $('[name="message"]').val();
-    $.post("https://gamemodeon.de/sb/input-login.php", { sid: sid, message: message }).done(function(data) {
+    $.post(url+'/input-login.php', { sid: sid, message: message }).done(function(data) {
         $('[name="message"]').val('');
     });
 }
+
+function menu() {
+    alert('gnihihihi');
+}
+
+/*$('#message').focus(function() {
+    $('#message').height('50');
+})*/
 
 
 </script></head><body>
 
 
-<div id="login" style="display:none;">
+<div id="login">
     <input type="text" value="Username" name="user"><br>
     <input type="password" value="Passwort" name="passwd"><br>
     <input type="checkbox" value="" name="savelogin"> Login speichern<br>
@@ -84,10 +78,16 @@ function input() {
     <div id="errorlogin" style="display:none;color:red;">Fehlerhafter Login. Bitte versuchen Sie es erneut!</div>
 </div>
 
-<div id="input" style="display:none;">
+<div id="input">
     <input type="text" id="message" name="message"><br>
     <input type="submit" onclick="input();" value="SHOUT">
 </div>
 
+<div id="output"></div>
 
-<div id="output"></div><script type="text/javascript">init();</script></body></html>
+<div id="menubutton" onclick="menu();">
+    <hr><hr><hr>
+</div>
+
+
+<script type="text/javascript">init();</script></body></html>
