@@ -2,7 +2,7 @@ body {
     background-color: black;
     color: #AAAAAA;
     font-family: 'Trebuchet MS', Arial, sans-serif;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 input {
@@ -12,10 +12,11 @@ input {
     border: none;
     margin-bottom: 2px;
     width: 100%;
-    font-size: 20px;
+    height: 30px;
 }
 input[type=submit] {
     border-radius: 5px;
+    font-weight: bold;
 }
 
 div {
