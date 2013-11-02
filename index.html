@@ -47,6 +47,7 @@ function output() {
 }
 
 function savelogin() {
+    $('#debug').append('DEBUGsavelogin');
     window.localStorage.setItem('user', user);
     window.localStorage.setItem('passwd', passwd);
     window.localStorage.setItem('autologin', 'true');
