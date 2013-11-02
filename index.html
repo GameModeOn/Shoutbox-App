@@ -77,13 +77,13 @@ function closemenu() {
     $('#main').show();
 }
 
-</script></head><body><div id="main">
+</script></head><body><div id="main"> <!-- main app -->
 
 
 <div id="login">
     <input type="text" value="Username" name="user"><br>
     <input type="password" value="Passwort" name="passwd"><br>
-    &nbsp;&nbsp;<input type="checkbox" value="" name="savelogin"> Login speichern<br>
+    &nbsp;<input type="checkbox" value="" name="savelogin"> Login speichern<br>
     <input type="submit" onclick="login();" value="Login">
     <div id="errorlogin" style="display:none;color:red;">Fehlerhafter Login. Bitte versuchen Sie es erneut!</div>
 </div>
@@ -100,7 +100,7 @@ function closemenu() {
 </div>
 
 
-</div><div id="menu" style="display:none;">
+</div><div id="menu" style="display:none;"> <!-- menu -->
 
 <input type="submit" onclick="logout();" value="Ausloggen">
 
