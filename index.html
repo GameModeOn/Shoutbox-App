@@ -11,8 +11,8 @@ function init() {
     } else {
         $('#login').show();
     }
-    output();
     $('#output').show();
+    output();
     $('#main').show();
 }
 
@@ -55,6 +55,8 @@ function logout() {
     window.localStorage.removeItem('user');
     window.localStorage.removeItem('passwd');
     window.localStorage.removeItem('autologin');
+    $('#input').hide();
+    $('#login').show();
     closemenu();
 }
 
