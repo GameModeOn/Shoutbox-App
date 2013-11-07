@@ -1,7 +1,5 @@
 url = 'https://gamemodeon.de/sb/3';
 
-document.addEventListener("deviceready", init, true);
-
 function init() {
     var autologin = window.localStorage.getItem('autologin');
     if(autologin == 'true') {
