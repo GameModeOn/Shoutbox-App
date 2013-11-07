@@ -77,6 +77,10 @@ function closemenu() {
     $('#main').show();
 }
 
+function closeapp() {
+    navigator.app.exitApp();
+}
+
 </script></head><body><div id="main"> <!-- main app -->
 
 
@@ -103,6 +107,7 @@ function closemenu() {
 </div><div id="menu" style="display:none;"> <!-- menu -->
 
 <input type="submit" onclick="logout();" value="Ausloggen">
+<input type="submit" onclick="closeapp();" value="Schließen">
 
 <div class="menubutton" onclick="closemenu();">
     <hr><hr><hr>
