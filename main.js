@@ -1,4 +1,6 @@
-url = 'https://gamemodeon.de/sb/3';
+api = 'https://gamemodeon.de/sb/3';
+
+document.addEventListener("deviceready", init, true);
 
 function init() {
     var autologin = window.localStorage.getItem('autologin');
@@ -16,7 +18,7 @@ function init() {
 
 lid = 0;
 function output() {
-    $.get(url+'/output.php?lid='+lid+'&time='+new Date, function(data){
+    $.get(api+'/output.php?lid='+lid+'&time='+new Date, function(data){
         if(data != '') {
             var lmsg = data.split("\n")
             lid = lmsg[0];
@@ -35,7 +37,7 @@ function savelogin(user, passwd) {
 function login(user, passwd) {
     user = user || $('[name="user"]').val();
     passwd = passwd || $('[name="passwd"]').val();
-    $.post(url+'/input-login.php', { user: user, passwd: passwd }).done(function(data) {
+    $.post(api+'/input-login.php', { user: user, passwd: passwd }).done(function(data) {
         if(data != '') {
             sid = data;
             $('#login').hide();
@@ -60,7 +62,7 @@ function logout() {
 
 function input() {
     var message = $('[name="message"]').val();
-    $.post(url+'/input-login.php', { sid: sid, message: message }).done(function(data) {
+    $.post(api+'/input-login.php', { sid: sid, message: message }).done(function(data) {
         $('[name="message"]').val('');
     });
 }
