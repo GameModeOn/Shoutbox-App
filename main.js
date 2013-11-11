@@ -1,4 +1,4 @@
-api = 'https://gamemodeon.de/sb/3';
+api = 'http://gamemodeon.de/sb/3';
 
 document.addEventListener("deviceready", init, true);
 
