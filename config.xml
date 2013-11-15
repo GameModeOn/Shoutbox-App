@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "de.gamemodeon.sb"
+	version		= "0.5">
+
+	<name>Shoutbox</name>
+
+	<description>
+		An app for the GMO Shoutbox on gamemodeon.de 
+	</description>
+
+	<author href="https://gamemodeon.de/" email="info@gamemodeon.de">
+		GameModeOn
+	</author>
+
+	<icon src="images/phonegap/icon.png" />
+	<gap:splash src="image/phonegap/splash.png" />
+
+</widget>
