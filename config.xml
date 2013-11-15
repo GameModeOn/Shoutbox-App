@@ -2,12 +2,12 @@
 <!-- VERSION -->
 <widget xmlns = "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "de.gamemodeon.sb"
+	id		= "de.gamemodeon.sb.dev"
 	version		= "0.5">
 	<preference name="phonegap-version" value="2.9.0" />
 	
 	<!-- DESCRIPTION -->
-	<name>Shoutbox</name>
+	<name>DEV Shoutbox</name>
 	<description>
 		Die echte, originale, hoch gelobte GMO Shoutbox App!
 		Besucht uns auf www.gamemodeon.de
@@ -21,6 +21,7 @@
 	<gap:splash src="image/phonegap/splash.png" />
 	
 	<!-- PERMISSION -->
+	<preference name="permissions" value="none"/>
 	<feature name="http://api.phonegap.com/1.0/camera"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
 	<feature name="http://api.phonegap.com/1.0/notification"/>
