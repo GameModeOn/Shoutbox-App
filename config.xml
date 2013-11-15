@@ -18,7 +18,7 @@
 	
 	<!-- IMAGE -->
 	<icon src="images/phonegap/icon.png" />
-	<gap:splash src="image/phonegap/splash.png" />
+<!--	<gap:splash src="image/phonegap/splash.png" /> -->
 	
 	<!-- PERMISSION -->
 	<preference name="permissions" value="none"/>
@@ -27,7 +27,7 @@
 	<feature name="http://api.phonegap.com/1.0/notification"/>
 	
 	<!-- API ACCESS -->
-	<access origin="https://gamemodeon.de" />
+	<access origin="*" />
 	
 	<!-- OS SELECTION-->
 	<gap:platform name="android" />
