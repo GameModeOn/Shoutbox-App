@@ -4,17 +4,25 @@
 	id		= "de.gamemodeon.sb"
 	version		= "0.5">
 
+	<!-- DESCRIPTIONAL -->
 	<name>Shoutbox</name>
-
 	<description>
 		An app for the GMO Shoutbox on gamemodeon.de 
 	</description>
-
 	<author href="https://gamemodeon.de/" email="info@gamemodeon.de">
 		GameModeOn
 	</author>
 
+	<!-- IMAGES -->
 	<icon src="images/phonegap/icon.png" />
 	<gap:splash src="image/phonegap/splash.png" />
+
+	<!-- PERMISSIONS -->
+	<feature name="http://api.phonegap.com/1.0/camera"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="http://api.phonegap.com/1.0/notification"/>
+
+	<!-- API ACCESS -->
+	<access origin="https://gamemodeon.de" />
 
 </widget>
