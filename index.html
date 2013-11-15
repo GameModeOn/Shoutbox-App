@@ -1,13 +1,13 @@
 <!DOCTYPE html><html><head><title>GMO Shoutbox</title><script type="text/javascript" src="jquery.js"></script><script type="text/javascript" src="main.js"></script><link rel="stylesheet" type="text/css" href="main.css"></head><body><div id="main">
 
-<!-- main app -->
+<!-- MAIN -->
 
 <div id="login">
     <input type="text" value="Username" name="user"><br>
     <input type="password" value="Passwort" name="passwd"><br>
     &nbsp;<input type="checkbox" value="" name="savelogin"> Login speichern<br>
     <input type="submit" onclick="login();" value="Login">
-    <div id="errorlogin" style="display:none;color:red;">Fehlerhafter Login. Bitte versuchen Sie es erneut!</div>
+    <div class="error" id="errLogin">Fehlerhafter Login. Bitte versuchen Sie es erneut!</div>
 </div>
 
 <div id="input">
@@ -17,22 +17,23 @@
 
 <div id="output"></div>
 
-<div id="menubutton" class="menubutton" onclick="openmenu();">
+<div class="btnMenu" onclick="openmenu();">
     <hr><hr><hr>
 </div>
 
+<!-- END MAIN -->
 
 </div><div id="menu" style="display:none;">
 
-<!-- menu -->
+<!-- MENU -->
 
+<input id="btnLogout" type="submit" onclick="logout();" value="Ausloggen">
+<input id="btnCloseapp" type="submit" onclick="closeapp();" value="Schlie&szlig;en">
 
-<input type="submit" onclick="logout();" value="Ausloggen">
-<input type="submit" onclick="closeapp();" value="Schlie&szlig;en">
-
-<div class="menubutton" onclick="closemenu();">
+<div class="btnMenu" onclick="closemenu();">
     <hr><hr><hr>
 </div>
 
+<!-- END MENU -->
 
 </div><script type="text/javascript" src="phonegap.js"></script></body></html>

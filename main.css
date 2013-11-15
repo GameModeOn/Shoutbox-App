@@ -4,7 +4,11 @@ body {
     font-family: 'Trebuchet MS', Arial, sans-serif;
     font-size: 0.9em;
 }
+.error {
+    color: red;
+}
 
+/* FORMULAR */
 input {
     background-color: gray;
     margin: 0px;
@@ -19,24 +23,13 @@ input[type=submit] {
     font-weight: bold;
 }
 
+/* DIV */
 div {
     display: none;
 }
 
-#menubutton {
-    display: block;
-}
-
-#menu div, #input div {
-    display: block;
-}
-
-.smilie {
-    position: relative;
-    top: 4px;
-}
-
-.menubutton {
+/* MENUBUTTON */
+.btnMenu {
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -45,8 +38,22 @@ div {
     padding-right: 4px;
     background-color: #202020;
     border-radius: 5px;
+    display: block;
 }
 
+/* MENU */
+#menu div, #input div {
+    display: block;
+}
+#btnLogout {
+    display: none;
+}
+
+/* OUTPUT */
+.smilie {
+    position: relative;
+    top: 4px;
+}
 a:link, a:visited, a:hover, a:active {
     color: #AAAAAA;
     text-decoration: underline;

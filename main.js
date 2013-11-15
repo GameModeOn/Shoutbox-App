@@ -42,11 +42,12 @@ function login(user, passwd) {
             sid = data;
             $('#login').hide();
             $('#input').show();
+            $('#btnLogout').show();
             if($('[name="savelogin"]').prop('checked')) {
                 savelogin(user, passwd);
             }
         } else {
-            $('#errorlogin').show();
+            $('#errLogin').show();
         }
     });
 }
@@ -56,6 +57,7 @@ function logout() {
     window.localStorage.removeItem('autologin');
     $('#input').hide();
     $('#login').show();
+    $('#btnLogout').hide();
     closemenu();
 }
 
