@@ -23,6 +23,10 @@ div {
     display: none;
 }
 
+#menubutton {
+    display: block;
+}
+
 #menu div, #input div {
     display: block;
 }

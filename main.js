@@ -42,7 +42,6 @@ function login(user, passwd) {
             sid = data;
             $('#login').hide();
             $('#input').show();
-            $('#menubutton').show();
             if($('[name="savelogin"]').prop('checked')) {
                 savelogin(user, passwd);
             }
