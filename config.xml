@@ -18,7 +18,6 @@
 	
 	<!-- IMAGE -->
 	<icon src="images/phonegap/icon.png" />
-<!--	<gap:splash src="image/phonegap/splash.png" /> -->
 	
 	<!-- PERMISSION -->
 	<preference name="permissions" value="none"/>
