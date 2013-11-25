@@ -3,16 +3,17 @@ api = 'https://gamemodeon.de/sb/4/';
 document.addEventListener("deviceready", init, true);
 
 function init() {
-    $('#login').show();
     var autologin = window.localStorage.getItem('autologin');
     if(autologin == 'true') {
         var user = window.localStorage.getItem('user');
         var passwd = window.localStorage.getItem('passwd');
         login(user, passwd);
+    } else {
+        $('#login').show();
     }
-    $('#main').show();
     $('#output').show();
     output();
+    $('#main').show();
 }
 
 lid = 0;
