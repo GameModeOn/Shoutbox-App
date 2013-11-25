@@ -11,8 +11,8 @@ function init() {
         login(user, passwd);
     }
     $('#main').show();
-    output();
     $('#output').show();
+    output();
 }
 
 lid = 0;
