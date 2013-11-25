@@ -3,17 +3,16 @@ api = 'http://drax.gamemodeon.de/';
 document.addEventListener("deviceready", init, true);
 
 function init() {
+    $('#login').show();
     var autologin = window.localStorage.getItem('autologin');
     if(autologin == 'true') {
         var user = window.localStorage.getItem('user');
         var passwd = window.localStorage.getItem('passwd');
         login(user, passwd);
-    } else {
-        $('#login').show();
     }
-    $('#output').show();
-    output();
     $('#main').show();
+    output();
+    $('#output').show();
 }
 
 lid = 0;
