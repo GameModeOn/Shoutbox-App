@@ -4,7 +4,7 @@
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "de.gamemodeon.sb"
 	version		= "0.6">
-	<preference name="phonegap-version" value="2.9.0" />
+	<preference name="phonegap-version" value="3.1.0" />
 	
 	<!-- DESCRIPTION -->
 	<name>Shoutbox</name>
@@ -18,13 +18,16 @@
 	<!-- IMAGE -->
 	<icon src="images/phonegap/icon.png" />
 	
+	<!-- PLUGIN -->
+	<gap:plugin name="com.phonegap.plugins.pushplugin" />
+	
 	<!-- PERMISSION -->
 	<preference name="permissions" value="none" />
 	<feature name="http://api.phonegap.com/1.0/camera" />
 	<feature name="http://api.phonegap.com/1.0/network" />
 	<feature name="http://api.phonegap.com/1.0/notification" />
 	
-	<!-- API ACCESS -->
+	<!-- WEB ACCESS -->
 	<access origin="*" />
 	
 	<!-- OS SELECTION-->
