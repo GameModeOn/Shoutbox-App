@@ -3,13 +3,13 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "de.gamemodeon.sb"
-	version		= "0.5.1">
+	version		= "0.6">
 	<preference name="phonegap-version" value="2.9.0" />
 	
 	<!-- DESCRIPTION -->
 	<name>Shoutbox</name>
 	<description>
-		Die echte, originale, hoch gelobte GMO Shoutbox App! Besucht uns auf www.gamemodeon.de
+		Die echte, originale, hoch gelobte GMO Shoutbox App! Besucht uns auch auf www.gamemodeon.de
 	</description>
 	<author href="https://gamemodeon.de/" email="info@gamemodeon.de">
 		GameModeOn
