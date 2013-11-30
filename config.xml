@@ -15,8 +15,10 @@
 		GameModeOn
 	</author>
 	
-	<!-- IMAGE -->
-	<icon src="images/phonegap/icon.png" />
+	<!-- ICON -->
+	<icon src="images/icons/android-mdpi.png" gap:platform="android" gap:density="mdpi" />
+	<icon src="images/icons/android-hdpi.png" gap:platform="android" gap:density="hdpi" />
+	<icon src="images/icons/android-xhdpi.png" gap:platform="android" gap:density="xhdpi" />
 	
 	<!-- PLUGIN -->
 	<gap:plugin name="com.phonegap.plugins.pushplugin" />
