@@ -3,8 +3,8 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "de.gamemodeon.sb"
-	versionCode	= "10101"
-	version		= "0.5.1">
+	versionCode	= "1010101"
+	version		= "0.5.1.1">
 	<preference name="phonegap-version" value="3.1.0" />
 	
 	<!-- DESCRIPTION -->
