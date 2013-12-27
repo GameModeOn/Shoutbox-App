@@ -30,6 +30,9 @@
 	<feature name="http://api.phonegap.com/1.0/network" />
 	<feature name="http://api.phonegap.com/1.0/notification" />
 	
+	<!-- WEB ACCESS -->
+	<access origin="http://gamemodeon.de" />
+	
 	<!-- OS SELECTION-->
 	<gap:platform name="android" />
 	<gap:platform name="winphone" />
