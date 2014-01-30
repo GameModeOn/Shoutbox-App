@@ -79,5 +79,5 @@ function closemenu() {
 }
 
 function closeapp() {
-    navigator.app.exitApp() ();
+    navigator.app.exitApp();
 }
